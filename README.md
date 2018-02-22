@@ -26,6 +26,9 @@ config.jwt = {
 	}
 
 // router.js
+// 此时访问all接口需要request header 带token
+// 具体格式如下, 其中Bearer后面是login返回给客户端的token
+// Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVhOGQ4MzM0MDFjZjE1NjJjN2RhNzM4YyJ9LCJleHAiOjE1MTk4NjczNTYsImlhdCI6MTUxOTI2MjU1Nn0.mCKLjMZIhYglMYve75lLUSIcONxbTE_Dq4KP1E95vwU
 router.post('/api/user/all', app.jwt, controller.user.all)
 
 
