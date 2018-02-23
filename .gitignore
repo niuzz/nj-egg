@@ -12,3 +12,4 @@ run/
 *.un~
 .vscode/
 app/public/uploads/
+app/spider/a.xlsx

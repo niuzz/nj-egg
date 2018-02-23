@@ -12,7 +12,8 @@
     "egg-scripts": "^2.5.0",
     "egg-validate": "^1.0.0",
     "eventproxy": "^1.0.0",
-    "superagent-charset": "^1.2.0"
+    "superagent-charset": "^1.2.0",
+    "xlsx": "^0.12.2"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -38,7 +39,8 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
-    "spider": "node ./app/spider/spider.js"
+    "spider": "node ./app/spider/spider.js",
+    "excel": "node ./app/spider/excel.js"
   },
   "ci": {
     "version": "8"
