@@ -6,13 +6,31 @@
 module.exports = app => {
 	const mongoose = app.mongoose
 	const UserSchema = new mongoose.Schema({
-		mobile: { type: String, unique: true, required: true },
-		password: { type: String, required: true },
-		realName: { type: String, required: true },
-		// role: { type: mongoose.Schema.Types.ObjectId, ref: 'Role' },
-		avatar: { type: String, default: 'https://1.gravatar.com/avatar/a3e54af3cb6e157e496ae430aed4f4a3?s=96&d=mm' },
-		extra: { type: mongoose.Schema.Types.Mixed },
-		createdAt: { type: Date, default: Date.now }
+		"uid": String,
+		"name": String,
+		"avatar": String,
+		"mobile": String,
+		"password": String,
+		"orderList": Array,
+		"cartList": [
+			{
+				"productId": String,
+				"productImg": String,
+				"productName": String,
+				"checked": String,
+				"productNum": Number,
+				"productPrice": Number
+			}
+		],
+		'addressList': [
+			{
+				"addressId": Number,
+				"userName": String,
+				"streetName": String,
+				"tel": Number,
+				"isDefault": Boolean
+			}
+		]
 	})
 	return mongoose.model('User', UserSchema)
 }

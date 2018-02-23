@@ -3,6 +3,13 @@
 ## about
 使用阿里egg框架搭建的RESTful服务端，数据库使用mongo，使用jwt完成用户识别
 
+## 数据
+```bash
+# 爬取锤子官网数据，填充goods数据库
+# 执行
+npm run spider
+```
+
 ## 配置
 ```javascript
 // 更改config.default.js相应mongo配置

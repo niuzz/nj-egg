@@ -4,12 +4,15 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "egg": "^2.2.1",
     "egg-bcrypt": "^1.1.0",
     "egg-jwt": "^2.2.1",
     "egg-mongoose": "^2.1.1",
     "egg-scripts": "^2.5.0",
-    "egg-validate": "^1.0.0"
+    "egg-validate": "^1.0.0",
+    "eventproxy": "^1.0.0",
+    "superagent-charset": "^1.2.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -34,7 +37,8 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "spider": "node ./app/spider/spider.js"
   },
   "ci": {
     "version": "8"

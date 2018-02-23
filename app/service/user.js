@@ -38,6 +38,7 @@ class UserService extends Service {
 		} else {
 			user = payload
 		}
+		user.avatar = 'https://avatars0.githubusercontent.com/u/10822458?s=96&v=4'
 		user.password = await ctx.genHash(payload.password)
 		return ctx.model.User.create(user)
 	}
@@ -61,7 +62,7 @@ class UserService extends Service {
  * 
  */
 	async findByMobile(mobile) {
-		return this.ctx.model.User.findOne({mobile: mobile})
+		return this.ctx.model.User.findOne({mobile})
 	}
 
 	async findById(_id) {
