@@ -8,6 +8,8 @@
 # 爬取锤子官网数据，填充goods数据库
 # 执行
 npm run spider
+# 增加读取Excel to json功能
+npm run excel
 ```
 
 ## 配置
