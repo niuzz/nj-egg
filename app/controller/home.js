@@ -2,9 +2,9 @@
 
 const Controller = require('egg').Controller;
 
-const createRule = {
-  name: {type: 'string', required: true}
-};
+// const createRule = {
+//   name: { type: 'string', required: true },
+// };
 
 class HomeController extends Controller {
   async index() {

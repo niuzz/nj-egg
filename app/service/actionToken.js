@@ -1,22 +1,22 @@
-/******************************************
- *  Author : niuzz niuzz@hotmail.com   
+/** ****************************************
+ *  Author : niuzz niuzz@hotmail.com
  *  Created On : Wed Feb 21 2018
  *  File : actionToken.js
  *******************************************/
-'use strict'
+'use strict';
 
-const Service = require('egg').Service
+const Service = require('egg').Service;
 
 class ActionTokenService extends Service {
-	async apply(_id) {
-		const { ctx } = this
-		return ctx.app.jwt.sign({
-			data: {
-				_id: _id
-			},
-			exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 7)
-		}, ctx.app.config.jwt.secret)
-	}
+  async apply(_id) {
+    const { ctx } = this;
+    return ctx.app.jwt.sign({
+      data: {
+        _id,
+      },
+      exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 7),
+    }, ctx.app.config.jwt.secret);
+  }
 }
 
-module.exports = ActionTokenService
+module.exports = ActionTokenService;

@@ -20,16 +20,16 @@ module.exports = appInfo => {
       reconnectTries: Number.MAX_VALUE,
       bufferMaxEntries: 0,
     },
-  }
+  };
 
   config.jwt = {
     secret: 'NJason39A',
     enable: true, // default is false
     match: '/jwt', // optional
-  }
+  };
 
   // add your config here
-  config.middleware = ['errorHandler'];
+  config.middleware = [ 'errorHandler' ];
 
   return config;
 };
